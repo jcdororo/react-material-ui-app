@@ -1,9 +1,12 @@
-import React from 'react'
-import { AppBar, Toolbar, Typography, InputBase, Avatar } from '@mui/material'
+import React, { useState } from 'react'
+import { AppBar, Toolbar, Typography, InputBase, Avatar, Menu, MenuItem } from '@mui/material'
 import styled from '@emotion/styled'
 import { AcUnit, Badge, Notifications } from '@mui/icons-material'
 
 const Header = () => {
+  const [open, setOpen] = useState(false)
+
+
 const StyledToolbar = styled(Toolbar) ({
   display: 'flex',
   justifyContent: 'space-between'
@@ -39,9 +42,27 @@ const Icons = styled("div")(({theme}) => ({
           <Badge badgeContent={3} color='error'>
             <Notifications />
           </Badge>
-          <Avatar sx={{ bgcolor: "gray" }}>N</Avatar>
+          <Avatar onClick={() => setOpen(true)} sx={{ bgcolor: "gray" }}>N</Avatar>
         </Icons>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby='demo-positioned-button'
+        open={open}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "left"
+        }}
+      >
+          <MenuItem>Profile</MenuItem>
+          <MenuItem>My account</MenuItem>
+          <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   )
 }
