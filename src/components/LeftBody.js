@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box } from '@mui/material'
+import { Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
+import { AddShoppingCart, Drafts, Home, Inbox } from '@mui/icons-material'
 
 const LeftBody = () => {
   return (
@@ -12,7 +13,34 @@ const LeftBody = () => {
         
       }}
     >
-      LeftBody
+      <Box position="fixed">
+        <List>
+          <ListItem disablePadding>
+            <ListItemIcon>
+              <Home />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemIcon>
+              <Inbox />
+            </ListItemIcon>
+            <ListItemText primary="Inbox" />
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemIcon>
+              <Drafts />
+            </ListItemIcon>
+            <ListItemText primary="Drafts" />
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemIcon>
+              <AddShoppingCart />
+            </ListItemIcon>
+            <ListItemText primary="Shopping" />
+          </ListItem>
+        </List>
+      </Box>
 
     </Box>
   )

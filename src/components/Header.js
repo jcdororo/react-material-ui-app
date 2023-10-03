@@ -29,7 +29,7 @@ const Icons = styled("div")(({theme}) => ({
 }))
   
   return (
-    <AppBar>
+    <AppBar position='sticky'>
       <StyledToolbar>
         <Typography variant='h6' sx={{ display: { xs: "none", sm: "block" }}}>
           MUI
