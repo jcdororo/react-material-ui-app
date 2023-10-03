@@ -5,6 +5,7 @@ import LeftBody from './components/LeftBody'
 import CenterBody from './components/CenterBody'
 import RightBody from './components/RightBody'
 import Footer from './components/Footer'
+import Create from './components/Create';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
         <LeftBody />
         <CenterBody />
         <RightBody />
-
       </Stack>
+      <Create />
       <Footer />
 
 
