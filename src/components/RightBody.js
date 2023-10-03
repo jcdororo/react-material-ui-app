@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
 import { Box, FormControlLabel, FormGroup, ImageList, ImageListItem, Switch } from '@mui/material'
 import { CheckBox } from '@mui/icons-material'
 
 
-const RightBody = () => {
+const RightBody = ({mode, setMode}) => {
 
-  const [mode, setMode] = useState("light")
 
   return (
     <Box
