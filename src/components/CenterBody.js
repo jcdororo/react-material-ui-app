@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/material'
+import Item from './Item'
 
 const CenterBody = () => {
   return (
@@ -8,7 +9,10 @@ const CenterBody = () => {
       sx={{ backgroundColor: 'primary.main'}}
 
     >
-      CenterBody
+      <Item />
+      <Item />
+      <Item />
+      <Item />
     </Box>
   )
 }
